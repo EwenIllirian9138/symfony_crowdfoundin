@@ -1,0 +1,5 @@
+index:
+
+liste_Json:
+    path: /genus/{genusName}/notes
+    controller: App\Controller\GenusController::getNotesAction
