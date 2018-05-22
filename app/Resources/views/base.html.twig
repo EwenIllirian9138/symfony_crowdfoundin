@@ -4,7 +4,9 @@
     <title>{% block title %}{% endblock %}</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}" type="text/css">
-    <script src="{{ asset('scripts/html5shiv.js') }}scripts/html5shiv.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css">
+    <script src="{{ asset('scripts/html5shiv.js') }}"></script>
+    <script src="{{ asset('scripts/bootstrap.js') }}"></script>
 </head>
 <body>
 {% include 'header.html.twig' %}
@@ -17,7 +19,7 @@
         <div id="homepage">
             <!-- Services -->
             <section id="services" class="clear">
-                <article class="one_third">
+                <article class="one">
                     <figure>
                         <figcaption>
                             {% block body %}{% endblock %}
@@ -25,18 +27,18 @@
                         </figcaption>
                     </figure>
                 </article>
-                <article class="one_third">
-                    <figure>
-                        <figcaption>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="one_third lastbox">
-                    <figure>
-                        <figcaption>
-                        </figcaption>
-                    </figure>
-                </article>
+                {#<article class="one_third">#}
+                    {#<figure>#}
+                        {#<figcaption>#}
+                        {#</figcaption>#}
+                    {#</figure>#}
+                {#</article>#}
+                {#<article class="one_third lastbox">#}
+                    {#<figure>#}
+                        {#<figcaption>#}
+                        {#</figcaption>#}
+                    {#</figure>#}
+                {#</article>#}
             </section>
             <!-- / Services -->
             <!-- ########################################################################################## -->
@@ -44,14 +46,14 @@
             <!-- ########################################################################################## -->
             <!-- ########################################################################################## -->
             <!-- Introduction -->
-            <section id="intro" class="last clear">
-                <article>
-                    <figure>
-                        <figcaption>
-                        </figcaption>
-                    </figure>
-                </article>
-            </section>
+            {#<section id="intro" class="last clear">#}
+                {#<article>#}
+                    {#<figure>#}
+                        {#<figcaption>#}
+                        {#</figcaption>#}
+                    {#</figure>#}
+                {#</article>#}
+            {#</section>#}
             <!-- / Introduction -->
         </div>
         <!-- / content body -->

@@ -40,7 +40,7 @@ class ProjectsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $project = new Project();
+        $project = new Projects();
         $form = $this->createForm('AppBundle\Form\ProjectsType', $project);
         $form->handleRequest($request);
 

@@ -3,32 +3,32 @@
 {% block body %}
     <h1>Projects list</h1>
 
-    <table>
-        <thead>
+    <table class="table">
+        <thead class="thead-dark">
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Date</th>
-                <th>Author</th>
-                <th>Actions</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date</th>
+                <th scope="col">Author</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for project in projects %}
             <tr>
-                <td><a href="{{ path('projects_show', { 'id': project.id }) }}">{{ project.id }}</a></td>
-                <td>{{ project.name }}</td>
-                <td>{{ project.description }}</td>
-                <td>{% if project.date %}{{ project.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ project.author }}</td>
-                <td>
+                <td class="table-secondary"><a class="badge" href="{{ path('projects_show', { 'id': project.id }) }}">{{ project.id }}</a></td>
+                <td class="table-secondary">{{ project.name }}</td>
+                <td class="table-secondary">{{ project.description }}</td>
+                <td class="table-secondary">{% if project.date %}{{ project.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td class="table-secondary">{{ project.author }}</td>
+                <td class="table-secondary">
                     <ul>
                         <li>
-                            <a href="{{ path('projects_show', { 'id': project.id }) }}">show</a>
+                            <a class="btn btn-dark" href="{{ path('projects_show', { 'id': project.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('projects_edit', { 'id': project.id }) }}">edit</a>
+                            <a class="btn btn-dark" href="{{ path('projects_edit', { 'id': project.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -39,7 +39,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('projects_new') }}">Create a new project</a>
+            <a class="btn btn-info" href="{{ path('projects_new') }}">Create a new project</a>
         </li>
     </ul>
 {% endblock %}

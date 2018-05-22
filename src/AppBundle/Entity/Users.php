@@ -14,7 +14,7 @@ class Users
 {
     /**
      * one User has Many Projects.
-     * @ORM\OneToMany(targetEntity="Projects", mappedBy="projects")
+     * @ORM\OneToMany(targetEntity="Projects", mappedBy="users")
      */
 
     private $projects;

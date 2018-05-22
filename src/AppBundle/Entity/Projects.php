@@ -15,7 +15,7 @@ class Projects
 
     /**
      * Many Projects have One User.
-     * @ORM\ManyToOne(targetEntity="Users", inversedBy="users")
+     * @ORM\ManyToOne(targetEntity="Users", inversedBy="projects")
      * @ORM\JoinColumn(name="users_id",onDelete="CASCADE")
      */
 
